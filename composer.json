@@ -1,0 +1,55 @@
+{
+    "name": "jd297/psr-logger",
+    "type": "library",
+    "description": "Simple implementation of PSR-3 (Logger Interface)",
+    "keywords": [
+        "psr-3",
+        "logger",
+        "logging"
+    ],
+    "license": "BSD-2-Clause",
+    "homepage": "https://github.com/jd297/psr-logger",
+    "authors": [
+        {
+            "name": "JD297",
+            "email": "jan.dommasch297@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "psr/log": "^3.0",
+        "psr/clock": "1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^v3.11",
+        "phpunit/phpunit": "^9.5.26",
+        "phpstan/phpstan": "^1.9",
+        "jd297/psr-clock": "^1.0"
+    },
+    "provide": {
+        "psr/log-implementation": "3.0.0"
+    },
+    "suggest": {
+        "jd297/psr-clock": "Implementation according to PSR-20 (Clock) is required"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jd297\\Psr\\Logger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jd297\\Psr\\Logger\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "scripts": {
+        "reformat": "php-cs-fixer fix --allow-risky=yes --ansi",
+        "unit": "phpunit",
+        "analyse": "phpstan analyse"
+    }
+}
