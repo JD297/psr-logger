@@ -21,7 +21,7 @@ The _FileHandler_ logs to a file that is specified in the first argument.
 ```php
 use Jd297\Psr\Logger\Handler\FileHandler;
 
-$fileHandler = new FileHandler('[projectdir]/log/dev.log')];
+$fileHandler = new FileHandler('[projectdir]/log/dev.log');
 ```
 
 ## Logger
